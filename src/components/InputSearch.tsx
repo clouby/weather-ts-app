@@ -50,7 +50,9 @@ const InputSearch: React.FC<InputSearchProps> = ({ onValueChange }) => {
       getOptionLabel={(option) =>
         typeof option === "string"
           ? option
-          : `${option.name}, ${option.state ? `(${option.state})` : ""}`
+          : `${option.name}${option.state ? `, ${option.state}` : ""}${
+              option.country ? ` (${option.country})` : ""
+            }`
       }
       onInputChange={handleInputChange}
       onChange={handleOnChange}
