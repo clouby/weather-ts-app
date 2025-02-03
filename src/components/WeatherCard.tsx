@@ -13,11 +13,11 @@ import { useFetchPlaceByCoordinates } from "../queries/index.ts";
 import { Coordinates } from "../types/index.ts";
 import { getWeatherIcon } from "../utils/index.ts";
 
-export interface CardProps {
+export interface WeatherCardProps {
   coordinates: Coordinates | null;
 }
 
-const WeatherCard: React.FC<CardProps> = ({ coordinates }) => {
+const WeatherCard: React.FC<WeatherCardProps> = ({ coordinates }) => {
   const { data, isLoading, error } = useFetchPlaceByCoordinates(coordinates);
 
   if (isLoading) {
