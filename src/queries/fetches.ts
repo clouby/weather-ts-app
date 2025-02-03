@@ -4,7 +4,7 @@ import {
 } from "../constants/index.ts";
 
 function wrongFetchMessage(name: string) {
-  return `Something went wrong with - ${name} - the fecth request from OpenWeather`;
+  return `Something went wrong with - ${name} - the fetch request from OpenWeather`;
 }
 
 export async function fetchPlaceByCoordinates(lat: number, lon: number) {
