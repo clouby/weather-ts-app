@@ -20,8 +20,6 @@ export interface CardProps {
 const WeatherCard: React.FC<CardProps> = ({ coordinates }) => {
   const { data, isLoading, error } = useFetchPlaceByCoordinates(coordinates);
 
-  console.log(data);
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
